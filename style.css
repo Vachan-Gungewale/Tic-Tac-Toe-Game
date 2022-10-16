@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ADA996;
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+}
+
+nav {
+
+  color: rgb(255, 0, 179);
+  height: 65px;
+  font-size: 27px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameInfo {
+  font-family: "Josefin Sans", sans-serif;
+
+}
+
+.gameInfo h1 {
+  font-size: 2.5rem;
+
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  margin: 40px 0;
+
+}
+
+.box {
+  border: 2px solid rgb(24, 149, 149);
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: rgb(217, 215, 215);
+}
+
+.info {
+  font-size: 22px;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+#reset {
+  margin: 0 23px;
+  padding: 6px 25px;
+  background: #f3e7f9;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Baloo Bhaina 2";
+  font-size: 18px;
+  font-weight: bolder;
+  background-color: rgb(255, 0, 179);
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.line {
+  background-color: black;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  background-color: #911d91;
+  transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+
+  .gameInfo {
+    margin-top: 34px;
+  }
+
+  .gameInfo h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+}
